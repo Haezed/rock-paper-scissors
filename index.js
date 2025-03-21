@@ -28,6 +28,7 @@ function randomizer (min, max){
     return randomNumber;
 }
 
+// The logic for Rock Paper Scissors.
 function rpsLogic (humanChoice, computerChoice){
     humanChoice = getHumanChoice();
     computerChoice = getComputerChoice();
@@ -37,6 +38,8 @@ function rpsLogic (humanChoice, computerChoice){
      let youLose = `You lose! ${computerChoice} beats ${humanChoice}!`;
 
      let tie = `It's a tie! Reload the page to play again!`;
+
+    //  the logic part, in order, Winning, Losing, and Tie.
 
      if (humanChoice === "ROCK" && computerChoice === "SCISSORS" ||
         humanChoice === "SCISSORS" && computerChoice === "PAPER" ||
@@ -53,67 +56,9 @@ function rpsLogic (humanChoice, computerChoice){
                    humanChoice === "SCISSORS" && computerChoice === "SCISSORS"){
                     console.log(tie);
                    }
-    // if (humanChoice === "ROCK" && computerChoice === "SCISSORS"){
-    //     humanScore++;
-    //     console.log(youWin);
-    // } else if (humanChoice === "SCISSORS" && computerChoice === "PAPER"){
-    //     humanScore++;
-    //     console.log(youWin);
-    // } else if (humanChoice === "PAPER" && computerChoice === "ROCK") {
-    //     humanScore++;
-    //     return console.log(youWin);
-    // } else if (humanChoice === "PAPER" && computerChoice === "SCiSSORS"){
-    //     computerScore++;
-    //     return console.log(youLose);
-    // } else if (humanChoice === "ROCK" && computerChoice === "PAPER"){
-    //     computerScore++;
-    //     return console.log(youLose);
-    // } else if (humanChoice === "SCISSORS" && computerChoice === "ROCK"){
-    //     computerScore++;
-    //     return console.log(youLose);
-    // } else if (humanChoice === "ROCK" && computerChoice === "ROCK"){
-    //     return console.log(tie);
-    // } else if (humanChoice === "PAPER" && computerChoice === "PAPER"){
-    //     return console.log(tie);
-    // } else if (humanChoice === "SCISSORS" && computerChoice === "SCISSORS") {
-    //     return console.log(tie);
-    // }
 }
 
-// function humanWin(humanChoice, computerChoice, win) {
-//     win = `you win! ${getHumanChoice()} beats ${getComputerChoice}!`
-//     humanChoice = getHumanChoice();
-//     computerChoice = getComputerChoice()
-
-//     if (humanChoice === "ROCK" && computerChoice === "SCISSORS" ||
-//         humanChoice === "SCISSORS" && computerChoice === "PAPER" ||
-//         humanChoice === "PAPER" && computerChoice === "ROCK") {
-//             humanScore++;
-//         }
-//         return console.log(win);
-// }
-
-// function youLose (lose){
-//     lose = `You lose! ${computerChoice} beats ${humanChoice}!`;
-
-//     if (getHumanChoice() === "ROCK" && getComputerChoice() === "PAPER" ||
-//         getHumanChoice() === "PAPER" && getComputerChoice() === "SCISSORS" ||
-//         getHumanChoice() === "SCISSORS" && getComputerChoice() === "ROCK"){
-//             computerScore++;
-//             return console.log(lose);
-//     }
-// }
-
-// function tied (tie){
-//     tie = `It's a tie! Reload the page to play again!`;
-
-//     if (getHumanChoice() === "ROCK" && getComputerChoice() === "ROCK" ||
-//         getHumanChoice() === "PAPER" && getComputerChoice() === "PAPER" ||
-//         getHumanChoice() === "SCISSORS" && getComputerChoice() === "SCISSORS"){
-//             return console.log(tie);
-//         }
-// }
-
+// plays a single round of RPS.
 function playRound(currentScore, played){
     played = `Your Oppenent played ${getComputerChoice()}`;
     currentScore = "The current score is Human:" + humanScore + " Computer:" + computerScore;
@@ -127,6 +72,7 @@ function playRound(currentScore, played){
     
 }
 
+// plays a game, or 5 rounds of RPS.
 function playGame(){
 
     for (let i = 0; i<= 5; i++){
@@ -134,5 +80,3 @@ function playGame(){
     }
 }
 console.log(playGame());
-// console.log(playGame());
-// console.log("The current score is Human:" + humanScore + " Computer:" + computerScore);
