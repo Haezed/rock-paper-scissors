@@ -28,7 +28,6 @@ function randomizer (min, max){
     return randomNumber;
 }
 
-// The logic for Rock Paper Scissors.
 function rpsLogic (humanChoice, computerChoice){
     humanChoice = getHumanChoice();
     computerChoice = getComputerChoice();
@@ -39,8 +38,7 @@ function rpsLogic (humanChoice, computerChoice){
 
      let tie = `It's a tie! Reload the page to play again!`;
 
-    //  the logic part, in order, Winning, Losing, and Tie.
-
+     // in order, the logic is win -> lose -> tie
      if (humanChoice === "ROCK" && computerChoice === "SCISSORS" ||
         humanChoice === "SCISSORS" && computerChoice === "PAPER" ||
         humanChoice === "PAPER" && computerChoice === "ROCK"){
@@ -58,7 +56,7 @@ function rpsLogic (humanChoice, computerChoice){
                    }
 }
 
-// plays a single round of RPS.
+// plays a single round.
 function playRound(currentScore, played){
     played = `Your Oppenent played ${getComputerChoice()}`;
     currentScore = "The current score is Human:" + humanScore + " Computer:" + computerScore;
@@ -71,10 +69,8 @@ function playRound(currentScore, played){
     console.log(currentScore);
     
 }
-
-// plays a game, or 5 rounds of RPS.
+// plays a game, or 5 rounds.
 function playGame(){
-
     for (let i = 0; i<= 5; i++){
         playRound(i);
     }
